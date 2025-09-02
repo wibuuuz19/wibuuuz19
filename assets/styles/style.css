@@ -1,0 +1,227 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* start header */
+header{
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    z-index: 9999;
+}
+
+.btn-resume{
+    text-decoration: none;
+    padding: 1rem 2rem;
+    background-color: #425c77;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: larger;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-resume:hover{
+    background-color: white;
+    color: #425c77;
+}
+
+.navbar-list ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-list ul li a:hover{
+    background-color: #425c77;
+    color: white;
+}
+
+.navbar-list ul li{
+    list-style: none;
+}
+
+.navbar-list ul{
+    padding-inline: 0;
+    display: flex;
+    gap: 1rem;
+}
+/* end header */
+
+.card{
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 16px;
+}
+
+.smallcard{
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+    border: 1px solid blue;
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px;
+    text-align: left;
+    width: 250px;
+    transition: all 0.2s ease-in-out;
+}
+
+.smallcard:hover{
+    box-shadow: 0 6px 12px rgb(0, 0, 0, 0.3);
+    transform: translateY(-6px);
+}
+
+.skillslogo{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 7rem;
+    align-items: center;
+}
+
+.skillslogo img{
+    transition: all 0.2s ease-in-out;
+}
+
+.skillslogo img:hover{
+    transform: translateY(-6px);
+}
+
+.ex{
+    display: flex;
+    gap: 1rem;
+    flex-flow: row wrap;
+}
+
+.hp{
+    display: flex;
+    gap: 1rem;
+    flex-flow: row wrap;
+}
+
+main{
+    display: flex;
+    padding: 20px;
+    gap: 1rem 2rem;
+}
+
+.content{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+/* start aside */
+aside{
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+}
+
+aside img{
+    border: 2px solid black;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+}
+
+aside table{
+    text-align: justify;
+}
+
+/* start footer */
+footer{
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #425c77;
+    color: white;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+footer h3, footer p{
+    margin-inline: 16px;
+}
+
+.socialmedia ul{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-inline: 0;
+}
+
+.socialmedia ul li{
+    list-style: none;
+}
+
+.socialmedia ul li a{
+    color: white;
+    font-size: large;
+    transition: all 0.2s ease-in-out;
+}
+
+.socialmedia ul li a:hover{
+    color: black;
+}
+/* end footer */
+
+@media screen and (max-width: 1024px){
+    .btn-resume{
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    header{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    header a{
+        margin: auto;
+    }
+
+    header .navbar-list ul{
+        flex-flow: row wrap;
+        gap: 1rem;
+        padding-left: 1rem;
+    }
+
+    main{
+        flex-flow: column nowrap;
+    }
+
+    aside{
+        order: -1;
+        text-align: center;
+    }
+
+    aside table{
+        margin: auto;
+    }
+
+    footer ul{
+        flex-flow: row nowrap;
+        gap: 0.5rem;
+    }
+}
